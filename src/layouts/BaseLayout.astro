@@ -10,6 +10,7 @@ interface Props {
 
 const { title, description } = Astro.props;
 const path = Astro.url.pathname.replace(/\/+$/, '') || '/';
+const base = import.meta.env.BASE_URL;
 ---
 <!doctype html>
 <html lang="pt-BR">
@@ -20,15 +21,15 @@ const path = Astro.url.pathname.replace(/\/+$/, '') || '/';
     <meta name="color-scheme" content="dark, light" />
     <title>{title}</title>
     <meta name="description" content={description ?? 'iGreen Energy — energia solar por assinatura, geração própria, veículos, conectividade e oportunidades.'} />
-    <link rel="icon" type="image/svg+xml" href="/assets/igreen-logomarca-neon.svg" />
-    <link rel="preload" as="image" href="/assets/igreen-logomarca-neon.svg" fetchpriority="high" />
+    <link rel="icon" type="image/svg+xml" href={`${base}assets/igreen-logomarca-neon.svg`} />
+    <link rel="preload" as="image" href={`${base}assets/igreen-logomarca-neon.svg`} fetchpriority="high" />
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-    <SiteHeader currentPath={path} />
+    <SiteHeader currentPath={path} base={base} />
     <main id="conteudo">
       <slot />
     </main>
-    <SiteFooter />
+    <SiteFooter base={base} />
   </body>
 </html>

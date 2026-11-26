@@ -6,6 +6,8 @@ import CtaBand from '../components/CtaBand.astro';
 import Video from '../components/Video.astro';
 import { links } from '../data/site';
 
+const base = import.meta.env.BASE_URL;
+
 const title = "iGreen Energy — Economize até 20% na conta de luz";
 const description =
   "Energia solar por assinatura com até 20% de desconto na conta de luz, sem obras, sem placas e sem taxa de adesão. 100% digital e regulamentado pela Lei 14.300/2022.";
@@ -557,7 +559,7 @@ const description =
       </div>
 
       <p style="text-align:center;margin-top:22px">
-        <a href="/energia-por-assinatura#documentos" class="btn btn--ghost">
+        <a href={`${base}energia-por-assinatura#documentos`} class="btn btn--ghost">
           Documentos necessários para cadastrar um cliente
         </a>
       </p>
@@ -653,7 +655,7 @@ const description =
       </div>
 
       <p style="text-align:center;margin-top:24px">
-        <a href="/faq" class="btn btn--ghost">
+        <a href={`${base}faq`} class="btn btn--ghost">
           Ver todas as perguntas frequentes
         </a>
       </p>

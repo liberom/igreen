@@ -3,14 +3,17 @@ export interface NavLink {
   label: string;
 }
 
+/** Base URL for GitHub Pages deployment (set via astro.config.mjs `base: '/igreen'`) */
+const base = import.meta.env.BASE_URL;
+
 export const navLinks: NavLink[] = [
-  { href: '/', label: 'Início' },
-  { href: '/sobre-a-igreen', label: 'Sobre a iGreen' },
-  { href: '/energia-por-assinatura', label: 'Energia por Assinatura' },
-  { href: '/geracao-propria', label: 'Geração Própria' },
-  { href: '/veiculos', label: 'Veículos' },
-  { href: '/conectividade', label: 'Conectividade' },
-  { href: '/faq', label: 'FAQ' },
+  { href: `${base}`, label: 'Início' },
+  { href: `${base}sobre-a-igreen`, label: 'Sobre a iGreen' },
+  { href: `${base}energia-por-assinatura`, label: 'Energia por Assinatura' },
+  { href: `${base}geracao-propria`, label: 'Geração Própria' },
+  { href: `${base}veiculos`, label: 'Veículos' },
+  { href: `${base}conectividade`, label: 'Conectividade' },
+  { href: `${base}faq`, label: 'FAQ' },
 ];
 
 export const licensee = {

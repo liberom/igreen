@@ -1,13 +1,19 @@
 ---
 import { navLinks, licensee, company, contact } from '../data/site';
 const year = new Date().getFullYear();
+
+interface Props {
+  base?: string;
+}
+
+const { base = '' } = Astro.props;
 ---
 <footer class="site-footer">
   <div class="wrap">
     <div class="site-footer__grid">
       <div>
         <p class="site-footer__brand">
-          <img src="/assets/igreen-logomarca-neon.svg" alt="" aria-hidden="true" />
+          <img src={`${base}assets/igreen-logomarca-neon.svg`} alt="" aria-hidden="true" />
           <span>Energia limpa. Bolso cheio.</span>
         </p>
         <p class="site-footer__licensee">
@@ -26,13 +32,13 @@ const year = new Date().getFullYear();
       <div>
         <h3>Conexões</h3>
         <ul>
-          <li><a href="/energia-por-assinatura#conexao-green">Conexão Green</a></li>
-          <li><a href="/energia-por-assinatura#conexao-livre">Conexão Livre</a></li>
-          <li><a href="/geracao-propria#conexao-solar">Conexão Solar</a></li>
-          <li><a href="/geracao-propria#conexao-placas">Conexão Placas</a></li>
-          <li><a href="/veiculos#conexao-mob">Conexão Mob</a></li>
-          <li><a href="/veiculos#conexao-seguros">Conexão Seguros</a></li>
-          <li><a href="/conectividade">Conexão Telecom</a></li>
+          <li><a href={`${base}energia-por-assinatura#conexao-green`}>Conexão Green</a></li>
+          <li><a href={`${base}energia-por-assinatura#conexao-livre`}>Conexão Livre</a></li>
+          <li><a href={`${base}geracao-propria#conexao-solar`}>Conexão Solar</a></li>
+          <li><a href={`${base}geracao-propria#conexao-placas`}>Conexão Placas</a></li>
+          <li><a href={`${base}veiculos#conexao-mob`}>Conexão Mob</a></li>
+          <li><a href={`${base}veiculos#conexao-seguros`}>Conexão Seguros</a></li>
+          <li><a href={`${base}conectividade`}>Conexão Telecom</a></li>
         </ul>
       </div>
 
@@ -40,7 +46,7 @@ const year = new Date().getFullYear();
         <h3>Navegação</h3>
         <ul>
           {navLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
-          <li><a href="/seja-licenciado">Seja Licenciado</a></li>
+          <li><a href={`${base}seja-licenciado`}>Seja Licenciado</a></li>
         </ul>
       </div>
 

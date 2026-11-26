@@ -5,6 +5,8 @@ import CtaBand from '../components/CtaBand.astro';
 import Video from '../components/Video.astro';
 import { company } from '../data/site';
 
+const base = import.meta.env.BASE_URL;
+
 const title = 'Sobre a iGreen — História, marcos e números | iGreen Energy';
 const description = 'Conheça a trajetória da iGreen: fundada em 2021, mais de 800 mil clientes, 40 mil licenciados e um ecossistema de energia, telecom, seguros e mobilidade elétrica.';
 
@@ -249,7 +251,7 @@ const regulation = [
     title='Quer fazer parte dessa <em>jornada?</em>'
     text="Seja cliente iGreen ou construa sua própria renda como licenciado."
     primary="Quero ser licenciado"
-    primaryHref="/seja-licenciado"
+    primaryHref={`${base}seja-licenciado`}
     badges={['+800 mil clientes', 'Ecossistema completo', 'Lei 14.300/2022']}
   />
 
