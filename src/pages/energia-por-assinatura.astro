@@ -1,0 +1,298 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "../components/Icon.astro";
+import CtaBand from "../components/CtaBand.astro";
+import Video from "../components/Video.astro";
+import { links } from "../data/site";
+
+const title =
+  "Energia por assinatura — Conexão Green e Conexão Livre | iGreen Energy";
+const description =
+  "Energia solar por assinatura para residências e comércios (Conexão Green, até 20%) e Mercado Livre de Energia para empresas (Conexão Livre, até 30%).";
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="hero hero--tight">
+    <div class="wrap hero__inner">
+      <p class="kicker">Soluções de energia</p>
+      <h1 class="hero__title">
+        Energia <em>por assinatura</em>
+      </h1>
+      <p class="hero__sub">
+        Duas formas de pagar menos na conta de luz: a Conexão Green para
+        residências e comércios (Grupo B) e a Conexão Livre para empresas em
+        alta tensão (Grupo A).
+      </p>
+    </div>
+  </section>
+
+  <!-- CONEXÃO GREEN -->
+  <section class="section" id="conexao-green">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker kicker--light">Conexão Green · Grupo B</p>
+        <h2 class="section__title">
+          Energia solar por assinatura para <em>residências e comércios</em>
+        </h2>
+        <p class="section__sub">
+          O “Netflix da energia”: você se conecta a uma usina solar já existente
+          e recebe desconto direto na sua conta de luz, sem instalar painéis e
+          sem nenhuma reforma.
+        </p>
+      </div>
+
+      <div class="grid grid--2" style="align-items:start">
+        <ul class="bullets">
+          <li class="bullet">
+            <span class="bullet__icon">
+              <Icon name="check" size={20} />
+            </span>
+            <div>
+              <h3>Zero investimento + Até 20% de economia</h3>
+              <p>
+                Sem taxas de adesão, sem compra de placas e sem obras no imóvel.
+                Além de desconto real direto na fatura mensal da concessionária.
+              </p>
+            </div>
+          </li>
+          <li class="bullet">
+            <span class="bullet__icon">
+              <Icon name="phone" size={20} />
+            </span>
+            <div>
+              <h3>100% digital</h3>
+              <p>Ativação em poucos minutos via foto da conta de luz.</p>
+            </div>
+          </li>
+          <li class="bullet">
+            <span class="bullet__icon">
+              <Icon name="leaf" size={20} />
+            </span>
+            <div>
+              <h3>Energia limpa</h3>
+              <p>
+                Créditos de energia renovável gerados em fazendas solares
+                parceiras.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <Video
+          id="Ma8QN7x_d-E"
+          title="iGreen Energy — Como funciona a Conexão Green?"
+        />
+      </div>
+
+      <h3 style="margin:34px 0 14px;font-size:1.2rem">
+        Comprar painel solar vs assinar energia solar
+      </h3>
+      <table class="compare">
+        <thead>
+          <tr>
+            <th>Critério</th>
+            <th>Painel próprio</th>
+            <th>Assinatura iGreen</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Investimento inicial</td>
+            <td>Depende do projeto e do orçamento</td>
+            <td>R$ 0</td>
+          </tr>
+          <tr>
+            <td>Instalação no telhado</td>
+            <td>Sim, obra necessária</td>
+            <td>Não</td>
+          </tr>
+          <tr>
+            <td>Manutenção</td>
+            <td>Por sua conta</td>
+            <td>Sem painéis no imóvel</td>
+          </tr>
+          <tr>
+            <td>Início da economia</td>
+            <td>Após instalação (~3 meses)</td>
+            <td>Em até 90 dias</td>
+          </tr>
+          <tr>
+            <td>Fidelidade</td>
+            <td>Equipamento é seu</td>
+            <td>Consulte as condições</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="offer-legend">
+        O desconto varia por estado e distribuidora. Consulte as condições.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONEXÃO LIVRE -->
+  <section class="section section--alt" id="conexao-livre">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker kicker--light">Conexão Livre · Grupo A</p>
+        <h2 class="section__title">
+          Mercado Livre de <em>Energia</em>
+        </h2>
+        <p class="section__sub">
+          Para grandes empresas, indústrias e supermercados que operam em alta
+          tensão (Grupo A), com gestão especializada do grupo Comerc Energia.
+        </p>
+      </div>
+
+      <div class="grid grid--2" style="align-items:center">
+        <ul class="bullets">
+          <li class="bullet">
+            <span class="bullet__icon">
+              <Icon name="building" size={20} />
+            </span>
+            <div>
+              <h3>Até 30% de redução</h3>
+              <p>
+                Economia de grande escala no custo de energia para empresas do
+                Grupo A.
+              </p>
+            </div>
+          </li>
+          <li class="bullet">
+            <span class="bullet__icon">
+              <Icon name="globe" size={20} />
+            </span>
+            <div>
+              <h3>Liberdade de fornecedor</h3>
+              <p>
+                Compra direta no Mercado Livre com previsibilidade orçamentária.
+              </p>
+            </div>
+          </li>
+          <li class="bullet">
+            <span class="bullet__icon">
+              <Icon name="shield" size={20} />
+            </span>
+            <div>
+              <h3>Gestão especializada</h3>
+              <p>
+                Suporte regulatório e operacional completo liderado pelo grupo
+                Comerc Energia.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <Video id="R_3dZ9r4yww" title="Entenda como funciona a Conexão Livre" />
+      </div>
+
+      <p class="offer-legend">
+        O desconto varia por estado e distribuidora. Consulte as condições.
+      </p>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="section" id="como-funciona">
+    <div class="wrap">
+      <div class="section__head section--center">
+        <p class="kicker kicker--light">Como funciona</p>
+        <h2 class="section__title">
+          Da inscrição ao desconto em <em>4 passos</em>
+        </h2>
+      </div>
+      <div class="grid grid--4">
+        <ol class="steps" style="display:contents">
+          <li class="steps__item">
+            <span class="steps__num">1</span>
+            <h3>Cadastre-se</h3>
+            <p>Inscrição gratuita e 100% online, em poucos minutos.</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__num">2</span>
+            <h3>Conexão à usina</h3>
+            <p>
+              A iGreen aloca sua conta em uma usina solar próxima da sua região.
+            </p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__num">3</span>
+            <h3>Injeção na rede</h3>
+            <p>
+              A energia limpa gerada vai direto para a rede da sua
+              distribuidora.
+            </p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__num">4</span>
+            <h3>Desconto mensal</h3>
+            <p>
+              Todo mês a fatura chega com até 20% de desconto garantido em
+              contrato.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCUMENTOS NECESSÁRIOS -->
+  <section class="section section--alt" id="documentos">
+    <div class="wrap">
+      <div class="section__head section--center">
+        <p class="kicker kicker--light">Documentos necessários</p>
+        <h2 class="section__title">
+          O que precisamos para <em>cadastrar um cliente</em>
+        </h2>
+        <p class="section__sub">
+          Separe os documentos conforme o tipo de cliente. O envio é 100%
+          digital, por foto, direto pelo celular.
+        </p>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="card">
+          <span class="card__icon">
+            <Icon name="doc" size={24} />
+          </span>
+          <h3>Pessoa Física (PF)</h3>
+          <ol class="doc-list">
+            <li>Conta de luz mais recente</li>
+            <li>Documento do titular com foto — CNH ou RG</li>
+            <li>E-mail</li>
+            <li>Telefone</li>
+          </ol>
+        </article>
+
+        <article class="card">
+          <span class="card__icon">
+            <Icon name="building" size={24} />
+          </span>
+          <h3>Pessoa Jurídica (PJ)</h3>
+          <ol class="doc-list">
+            <li>Cartão CNPJ</li>
+            <li>Contrato Social</li>
+            <li>Conta de luz mais recente</li>
+            <li>RG ou CNH do responsável administrativo</li>
+            <li>E-mail</li>
+            <li>Telefone</li>
+          </ol>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand
+    title="Quer pagar menos na <em>conta de luz?</em>"
+    text="Simulação gratuita, 100% digital e sem compromisso."
+    primary="Conexão Green"
+    primaryHref={links.cadastroMax}
+    secondary="Conexão Livre"
+    secondaryHref={links.livre}
+    badges={[
+      "Grátis para aderir",
+      "Sem obras nem placas",
+      "Lei 14.300/2022 · ANEEL",
+    ]}
+  />
+</BaseLayout>

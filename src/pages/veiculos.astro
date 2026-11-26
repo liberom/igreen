@@ -1,0 +1,221 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "../components/Icon.astro";
+import CtaBand from '../components/CtaBand.astro';
+import Video from '../components/Video.astro';
+import { links } from '../data/site';
+
+const title = "Veículos — Conexão Mob e Conexão Seguros | iGreen Energy";
+const description =
+  "Mobilidade elétrica com a Conexão Mob (eletropostos de 7 kW a 80 kW) e proteção veicular com a Conexão Seguros, em parceria com a BP Seguradora.";
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="hero hero--tight">
+    <div class="wrap hero__inner">
+      <p class="kicker">Veículos e proteção</p>
+      <h1 class="hero__title">
+        A gente cuida do seu <em>carro</em>
+      </h1>
+      <p class="hero__sub">
+        Infraestrutura de recarga para veículos elétricos com a Conexão Mob e
+        proteção veicular simples e sem burocracia com a Conexão Seguros.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONEXÃO MOB -->
+  <section class="section" id="conexao-mob">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker kicker--light">Conexão Mob · Mobilidade elétrica</p>
+        <h2 class="section__title">
+          Infraestrutura de <em>eletropostos</em>
+        </h2>
+        <p class="section__sub">
+          Infraestrutura para recarga de veículos elétricos — e uma excelente
+          opção de investimento para comércios, frotas e postos.
+        </p>
+        <ul class="checks" style="margin-top:22px">
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 13l4 4L19 7" />
+            </svg>
+            Aplicativo para localizar, iniciar e acompanhar recargas
+          </li>
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 13l4 4L19 7" />
+            </svg>
+            Excelente opção como investimento
+          </li>
+        </ul>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card">
+          <span class="card__icon">
+            <Icon name="plug" size={22} />
+          </span>
+          <h3>Carga lenta · ~4h (7 kW)</h3>
+          <p>
+            Ideal para comércios como pousadas, onde o carro fica estacionado
+            por mais tempo.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card__icon">
+            <Icon name="bolt" size={22} />
+          </span>
+          <h3>Carga rápida · ~1h (40 kW)</h3>
+          <p>
+            Ideal para comércios como shopping centers, com alto fluxo de
+            veículos.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card__icon">
+            <Icon name="spark" size={22} />
+          </span>
+          <h3>Carga ultra-rápida · 25 min (80 kW)</h3>
+          <p>
+            Ideal para postos de combustível e operações de alta rotatividade.
+          </p>
+        </article>
+      </div>
+
+      <div class="video-frame" style="margin-top:26px">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/FWGndOXfqNo?si=V-nyvWEzX5mjyfQ2"
+          title="O Melhor Investimento do Ano - Eletropostos iGreen"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONEXÃO SEGUROS -->
+  <section class="section section--alt" id="conexao-seguros">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker kicker--light">Conexão Seguros · Proteção veicular</p>
+        <h2 class="section__title">
+          Segurança para você e o seu <em>carro</em>
+        </h2>
+        <p class="section__sub">
+          Segurança contra os imprevistos do dia a dia, com uma solução simples
+          e sem burocracia, em parceria com a BP Seguradora.
+        </p>
+      </div>
+
+      <div class="grid grid--2" style="align-items:start">
+        <div>
+          <ul class="bullets">
+            <li class="bullet">
+              <span class="bullet__icon">
+                <Icon name="shield" size={20} />
+              </span>
+              <div>
+                <h3>BP Seguradora</h3>
+                <p>
+                  Parceria com a BP Seguradora, especializada em veículos
+                  elétricos e híbridos.
+                </p>
+              </div>
+            </li>
+            <li class="bullet">
+              <span class="bullet__icon">
+                <Icon name="check" size={20} />
+              </span>
+              <div>
+                <h3>Flexível e sem fidelidade</h3>
+                <p>Pagamento mensal, planos flexíveis e sem fidelidade.</p>
+              </div>
+            </li>
+            <li class="bullet">
+              <span class="bullet__icon">
+                <Icon name="money" size={20} />
+              </span>
+              <div>
+                <h3>Cashback por indicação</h3>
+                <p>Cashback por cada indicação válida.</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="card" style="margin-top:18px">
+            <h3>Cobertura para o seu dia a dia</h3>
+            <p>
+              Seguro auto e moto com pagamento mensal e sem fidelidade, com planos
+              flexíveis e cobertura nacional. Especializado em veículos elétricos
+              e híbridos.
+            </p>
+            <p style="margin-top:16px">
+              <a
+                href={links.seguros}
+                target="_blank"
+                rel="noopener"
+                class="btn btn--brand"
+              >
+                Quero proteger meu veículo
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <Video
+          id="YYu62Vj0VmM"
+          title="Nova parceria — iGreen e BP Seguradora"
+        />
+      </div>
+
+      <Video
+        id="gTq0y4RJlPc"
+        title="Vistoria Seguros"
+        marginTop
+      />
+    </div>
+  </section>
+
+  <CtaBand
+    title="Quer investir em <em>mobilidade elétrica?</em>"
+    text="Conheça a Conexão Mob e a Conexão Seguros com o seu licenciado iGreen."
+    primary="Quero proteger meu veículo"
+    primaryHref={links.seguros}
+    secondary="Quero investir em eletroposto"
+    secondaryHref={links.mob}
+    tertiary="Quero migrar meu eletroposto para iGreen"
+    tertiaryHref={links.mobMigracao}
+    accent="secondary"
+    badges={[
+      "Proteção para seu dia a dia",
+      "Infraestrutura para veículos elétricos",
+      "Oportunidade de investimento",
+    ]}
+  />
+</BaseLayout>

@@ -1,0 +1,34 @@
+---
+import '../styles/global.css';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const path = Astro.url.pathname.replace(/\/+$/, '') || '/';
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#040b16" />
+    <meta name="color-scheme" content="dark, light" />
+    <title>{title}</title>
+    <meta name="description" content={description ?? 'iGreen Energy — energia solar por assinatura, geração própria, veículos, conectividade e oportunidades.'} />
+    <link rel="icon" type="image/svg+xml" href="/assets/igreen-logomarca-neon.svg" />
+    <link rel="preload" as="image" href="/assets/igreen-logomarca-neon.svg" fetchpriority="high" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <SiteHeader currentPath={path} />
+    <main id="conteudo">
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

@@ -1,0 +1,23 @@
+---
+interface Props {
+  /** ID do vídeo no YouTube (pode incluir parâmetros, ex.: "abc123?si=xyz"). */
+  id: string;
+  title: string;
+  /** Adiciona espaçamento acima do vídeo. */
+  marginTop?: boolean;
+  class?: string;
+}
+
+const { id, title, marginTop = false, class: className = '' } = Astro.props;
+---
+<div class:list={['video-frame', { 'video-frame--mt': marginTop }, className]}>
+  <iframe
+    src={`https://www.youtube.com/embed/${id}`}
+    title={title}
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+    loading="lazy"
+  ></iframe>
+</div>

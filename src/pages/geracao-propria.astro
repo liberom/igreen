@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Video from '../components/Video.astro';
+import { links } from '../data/site';
+
+const title = 'Geração Própria — Conexão Solar e Conexão Placas | iGreen Energy';
+const description = 'Para quem quer os painéis físicos no imóvel: Conexão Solar, onde a iGreen investe e o sistema fica seu no fim do contrato, e Conexão Placas, projetos de engenharia para compra.';
+---
+<BaseLayout title={title} description={description}>
+
+  <section class="hero hero--tight">
+    <div class="wrap hero__inner">
+      <p class="kicker">Geração própria</p>
+      <h1 class="hero__title">Painéis no <em>seu telhado</em></h1>
+      <p class="hero__sub">
+        Para quem faz questão de ter os painéis físicos no imóvel, oferecemos duas modalidades:
+        a Conexão Solar e a Conexão Placas.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONEXÃO SOLAR -->
+  <section class="section" id="conexao-solar">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker kicker--light">Conexão Solar</p>
+        <h2 class="section__title">Sua usina <em>sem investimento</em></h2>
+        <p class="section__sub">
+          A iGreen arca com todo o investimento e a instalação das placas solares no seu imóvel.
+          Você começa a economizar na hora e, ao final do contrato, o sistema passa a ser 100% seu.
+        </p>
+      </div>
+
+      <article class="card" style="border-color:var(--brand-line)">
+        <span class="card__icon"><Icon name="sun" size={24} /></span>
+        <h3 style="font-size:1.25rem">Conexão Solar</h3>
+        <p style="margin-top:4px;color:var(--brand-strong);font-weight:700">Sua usina sem investimento</p>
+        <ul class="bullets" style="margin-top:16px">
+          <li class="bullet">
+            <div>
+              <h3>A iGreen investe por você</h3>
+              <p>A iGreen arca com todo o investimento e a instalação das placas solares no imóvel.</p>
+            </div>
+          </li>
+          <li class="bullet">
+            <div>
+              <h3>Economia imediata</h3>
+              <p>Você começa a economizar na hora e, ao final do contrato, o sistema passa a ser 100% seu.</p>
+            </div>
+          </li>
+        </ul>
+        <p style="margin-top:18px">
+          <a href={links.solar} target="_blank" rel="noopener" class="btn btn--brand">Tenho interesse</a>
+        </p>
+      </article>
+
+      <div class="video-grid" style="margin-top:26px">
+        <Video id="kRTfyk9wKiY" title="Entenda a Conexão Solar" />
+        <Video id="srBsev2rXhY" title="Conexão Solar — Filme completo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CONEXÃO PLACAS -->
+  <section class="section section--alt" id="conexao-placas">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker kicker--light">Conexão Placas</p>
+        <h2 class="section__title">Projetos de engenharia <em>sob medida</em></h2>
+        <p class="section__sub">
+          Para quem prefere comprar o próprio sistema à vista ou via financiamento bancário.
+        </p>
+      </div>
+
+      <article class="card">
+        <span class="card__icon"><Icon name="panel" size={24} /></span>
+        <h3 style="font-size:1.25rem">Conexão Placas</h3>
+        <p style="margin-top:4px;color:var(--ink-2);font-weight:700">Venda de projetos de engenharia</p>
+        <ul class="bullets" style="margin-top:16px">
+          <li class="bullet">
+            <div>
+              <h3>Projeto sob medida</h3>
+              <p>Projetos fotovoltaicos customizados para o seu imóvel, com instalação e suporte técnico.</p>
+            </div>
+          </li>
+          <li class="bullet">
+            <div>
+              <h3>Compra direta</h3>
+              <p>Para quem prefere comprar o próprio sistema à vista ou via financiamento bancário.</p>
+            </div>
+          </li>
+        </ul>
+        <p style="margin-top:18px">
+          <a href={links.placas} target="_blank" rel="noopener" class="btn btn--ghost">Quero um orçamento</a>
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- COMPARATIVO -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker kicker--light">Qual escolher?</p>
+        <h2 class="section__title">Sem investimento ou <em>compra direta</em>?</h2>
+      </div>
+
+      <table class="compare">
+        <thead>
+          <tr>
+            <th>Critério</th>
+            <th>Conexão Solar</th>
+            <th>Conexão Placas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Investimento inicial</td><td>R$ 0 (iGreen investe)</td><td>À vista ou financiado</td></tr>
+          <tr><td>Quem é o dono do sistema</td><td>Você, ao final do contrato</td><td>Você, desde a instalação</td></tr>
+          <tr><td>Instalação e suporte</td><td>Incluídas</td><td>Incluídas</td></tr>
+          <tr><td>Indicado para</td><td>Quer economizar sem investir</td><td>Quer o sistema próprio</td></tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top:20px;font-size:0.88rem;color:var(--ink-3)">
+        Valores, prazos e condições variam conforme o projeto e a região. Consulte o seu licenciado.
+      </p>
+    </div>
+  </section>
+
+  <CtaBand
+    title='Quer gerar a sua <em>própria energia?</em>'
+    text="Fale com o seu licenciado iGreen e escolha entre a Conexão Solar e a Conexão Placas."
+    primary="Falar com consultor"
+    primaryHref={links.consultor}
+    secondary=""
+    badges={['Sem investimento inicial', 'Sistema seu ao final do contrato', 'Projetos sob medida']}
+  />
+
+</BaseLayout>

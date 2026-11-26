@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Faq from '../components/Faq.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { links } from '../data/site';
+
+const title = 'Perguntas Frequentes — iGreen Energy';
+const description = 'Todas as dúvidas sobre energia solar por assinatura, economia na conta de luz, cadastro e o programa de licenciados iGreen.';
+
+const groups = [
+  {
+    title: 'Sobre o serviço',
+    items: [
+      {
+        q: 'O que é a Conexão Green?',
+        a: 'É um modelo inteligente de energia solar por assinatura. Você consome energia limpa gerada em fazendas solares parceiras e injetada diretamente na rede da sua distribuidora local, garantindo economia na sua fatura sem instalar nada no seu imóvel.',
+      },
+      {
+        q: 'Preciso instalar placas solares ou fazer obras?',
+        a: 'Não. Você não gasta com equipamentos, reformas ou alteração na fiação da sua casa ou empresa.',
+      },
+      {
+        q: 'Quanto eu consigo economizar na conta de luz?',
+        a: 'A economia garantida é de 10% a 20% de desconto direto na sua fatura mensal de energia, logo nos primeiros meses.',
+      },
+      {
+        q: 'Existe taxa de adesão ou fidelidade?',
+        a: 'Não há custo de ativação. O processo é 100% digital, gratuito e sem fidelidade obrigatória.',
+      },
+      {
+        q: 'A iGreen Energy é confiável?',
+        a: 'Sim. A iGreen atua em parceria estratégica com a Vibra Energia (antiga BR Distribuidora), com operação respaldada pela Lei nº 14.300/2022 e fiscalização da ANEEL.',
+      },
+      {
+        q: 'Qual é a área de cobertura?',
+        a: 'Atendemos as principais distribuidoras do Brasil. Você confirma a disponibilidade para o seu CEP durante o cadastro.',
+      },
+    ],
+  },
+  {
+    title: 'Sobre a economia',
+    items: [
+      {
+        q: 'Por que recebo 2 boletos ao aderir à Conexão Green?',
+        a: 'Você passa a receber o boleto da distribuidora local (taxas obrigatórias, como iluminação pública e impostos) e o boleto da iGreen (a energia injetada pela usina, com desconto garantido). A soma dos dois é sempre menor do que você pagava antes.',
+      },
+      {
+        q: 'Quando começo a ver o desconto na conta?',
+        a: 'O prazo para envio do primeiro boleto iGreen varia entre 60 e 180 dias, conforme a distribuidora. Se o cadastro já estiver ativo e a injeção de energia iniciado, o boleto é emitido no vencimento do próximo ciclo.',
+      },
+      {
+        q: 'O desconto muda com a bandeira tarifária?',
+        a: 'O desconto é fixo sobre a energia injetada, conforme o contrato. As bandeiras tarifárias continuam sendo cobradas pela distribuidora sobre as taxas obrigatórias.',
+      },
+      {
+        q: 'Posso cadastrar a minha empresa?',
+        a: 'Sim. Estabelecimentos comerciais e pequenas empresas podem cortar custos operacionais fixos em até 20% ao mês, sem investimento inicial de capital (CapEx).',
+      },
+    ],
+  },
+  {
+    title: 'Sobre o cadastro',
+    items: [
+      {
+        q: 'O cadastro tem custo?',
+        a: 'Nenhum. A adesão é 100% gratuita, sem taxa de entrada, mensalidade ou qualquer valor adiantado.',
+      },
+      {
+        q: 'Quais documentos preciso?',
+        a: 'Para pessoa física, basta a conta de energia atual para simular o desconto e o aceite digital pelo celular. Para empresas, o atendimento orienta a documentação necessária.',
+      },
+      {
+        q: 'Quanto tempo leva para concluir o cadastro?',
+        a: 'O processo é 100% digital e leva poucos minutos: cadastre-se online, envie uma foto da sua conta de luz e faça o aceite digital pelo celular.',
+      },
+      {
+        q: 'E se eu mudar de endereço?',
+        a: 'Basta atualizar seus dados no app. O serviço segue você dentro da mesma área de concessão.',
+      },
+    ],
+  },
+  {
+    title: 'Para licenciados',
+    items: [
+      {
+        q: 'Isso é pirâmide?',
+        a: 'A iGreen presta serviços reais (energia, telefonia, seguro e recarga elétrica) a clientes reais, e você ganha sobre o que os seus clientes pagam. Indicar outros licenciados é opcional: dá para construir renda só com a sua carteira.',
+      },
+      {
+        q: 'Preciso ser licenciado para ganhar indicando?',
+        a: 'Não. Para ganhar cashback indicando amigos basta ser cliente iGreen: cadastre a conta de luz pelo link de autoconexão (grátis) e indique pelo app iGreen Club. A licença é para quem quer atender clientes como negócio, com comissão recorrente.',
+      },
+      {
+        q: 'Quanto posso ganhar?',
+        a: 'Depende das conexões que você faz e de os clientes seguirem ativos. Não existe renda garantida. Use o simulador de ganhos para ver uma projeção com os percentuais oficiais.',
+      },
+      {
+        q: 'Preciso recrutar pessoas?',
+        a: 'Não. Até Executivo dá para subir só com os pontos da sua carteira. Formar equipe acelera os ganhos e passa a ser exigido a partir de Diretor.',
+      },
+      {
+        q: 'Preciso ter CNPJ ou ponto comercial?',
+        a: 'Não é preciso ponto comercial nem estoque, e você pode começar como pessoa física. Para receber os repasses, a iGreen orienta sobre a emissão de nota fiscal.',
+      },
+      {
+        q: 'Como funciona a renovação da licença?',
+        a: 'A licença vale 365 dias; a renovação tem o mesmo valor, pode ser corrigida pelo IPCA e tem 30 dias de carência para manter os bônus da rede.',
+      },
+    ],
+  },
+];
+---
+<BaseLayout title={title} description={description}>
+
+  <section class="hero hero--tight">
+    <div class="wrap hero__inner">
+      <p class="kicker">Perguntas frequentes</p>
+      <h1 class="hero__title">Tudo o que você precisa <em>saber</em></h1>
+      <p class="hero__sub">
+        Dúvidas sobre energia por assinatura, economia na conta de luz, cadastro e o programa de licenciados.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap" style="max-width:840px">
+      <Faq groups={groups} />
+    </div>
+  </section>
+
+  <CtaBand
+    title='Ainda ficou alguma <em>dúvida?</em>'
+    text="Fale com o seu licenciado iGreen e receba um atendimento direto."
+    primary="Falar com consultor"
+    primaryHref={links.consultor}
+    badges={['100% digital', 'Sem custo de adesão', 'Regulamentado pela ANEEL']}
+    note="Consulte as condições do contrato · Lei 14.300/2022"
+  />
+
+</BaseLayout>

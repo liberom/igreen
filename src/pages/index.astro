@@ -1,0 +1,670 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "../components/Icon.astro";
+import Simulator from "../components/Simulator.astro";
+import CtaBand from '../components/CtaBand.astro';
+import Video from '../components/Video.astro';
+import { links } from '../data/site';
+
+const title = "iGreen Energy — Economize até 20% na conta de luz";
+const description =
+  "Energia solar por assinatura com até 20% de desconto na conta de luz, sem obras, sem placas e sem taxa de adesão. 100% digital e regulamentado pela Lei 14.300/2022.";
+---
+
+<BaseLayout title={title} description={description}>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <p class="kicker">Energia solar por assinatura</p>
+      <h1 class="hero__title">
+        Você joga <em>dinheiro fora</em> todo mês?
+      </h1>
+      <p class="hero__sub">
+        Como reduzir até 20% da conta de luz sem mudar nada na sua casa — sem
+        obras, sem placas, sem taxa de adesão e sem fidelidade engessada.
+      </p>
+      <div class="hero__cta">
+        <a
+          href={links.cadastroMin}
+          target="_blank"
+          rel="noopener"
+          class="btn btn--primary"
+        >
+          Quero economizar
+        </a>
+        <a
+          href={links.consultor}
+          target="_blank"
+          rel="noopener"
+          class="btn btn--ghost-light"
+        >
+          Falar com consultor
+        </a>
+      </div>
+      <div class="hero__badges">
+        <span>
+          <svg
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M5 13l4 4L19 7" />
+          </svg>
+          Grátis para aderir
+        </span>
+        <span>
+          <svg
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M5 13l4 4L19 7" />
+          </svg>
+          Sem obras nem placas
+        </span>
+        <span>
+          <svg
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M5 13l4 4L19 7" />
+          </svg>
+          Lei 14.300/2022 · ANEEL
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMA -->
+  <section class="section" id="problema">
+    <div class="wrap">
+      <div class="section__head section--center">
+        <p class="kicker kicker--light">O problema</p>
+        <h2 class="section__title">
+          Você está pagando <em>mais caro</em> do que poderia?
+        </h2>
+        <p class="section__sub">
+          A energia elétrica no Brasil é influenciada por bandeiras tarifárias,
+          custos de geração, transmissão e encargos setoriais. Em períodos de
+          seca, as hidrelétricas geram menos e usinas térmicas mais caras são
+          acionadas — e quem paga a conta é você.
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card">
+          <span class="card__icon">
+            <Icon name="chart" size={22} />
+          </span>
+          <h3>Bandeiras tarifárias</h3>
+          <p>
+            Aumento constante e imprevisível no custo da eletricidade cobrado
+            pelas concessionárias.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card__icon">
+            <Icon name="bolt" size={22} />
+          </span>
+          <h3>Seca e termelétricas</h3>
+          <p>
+            Com menos água nos reservatórios, usinas térmicas mais caras entram
+            em operação e a tarifa sobe.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card__icon">
+            <Icon name="building" size={22} />
+          </span>
+          <h3>Peso no seu bolso</h3>
+          <p>
+            Despesas fixas com energia corroendo o orçamento da sua casa ou da
+            sua empresa, todo mês.
+          </p>
+        </article>
+      </div>
+
+      <Video
+        id="0LpWBUcZ8D4"
+        title="O segredo para ZERAR sua conta de energia! Com Márcio Garcia"
+        marginTop
+      />
+    </div>
+  </section>
+
+  <!-- SOLUÇÃO -->
+  <section class="section section--alt" id="solucao">
+    <div class="wrap">
+      <div class="section__head section--center">
+        <p class="kicker kicker--light">A solução</p>
+        <h2 class="section__title">
+          Energia solar por assinatura: o <em>“Netflix da energia”</em>
+        </h2>
+        <p class="section__sub">
+          Você se conecta a uma usina solar já existente e recebe desconto
+          direto na sua conta de luz. Nada muda na sua casa: a energia continua
+          chegando pela sua distribuidora, só que mais barata.
+        </p>
+      </div>
+
+      <div class="grid grid--2">
+        <ul class="bullets">
+          <li class="bullet">
+            <span class="bullet__icon">
+              <Icon name="shield" size={20} />
+            </span>
+            <div>
+              <h3>Regulamentado pela Lei 14.300/2022</h3>
+              <p>
+                O sistema de compensação de energia é fiscalizado pela ANEEL, o
+                marco legal da geração distribuída.
+              </p>
+            </div>
+          </li>
+          <li class="bullet">
+            <span class="bullet__icon">
+              <Icon name="leaf" size={20} />
+            </span>
+            <div>
+              <h3>Energia 100% limpa</h3>
+              <p>
+                Créditos de energia renovável gerados em fazendas solares
+                parceiras e injetados na rede.
+              </p>
+            </div>
+          </li>
+          <li class="bullet">
+            <span class="bullet__icon">
+              <Icon name="phone" size={20} />
+            </span>
+            <div>
+              <h3>100% digital</h3>
+              <p>
+                Ativação em poucos minutos com uma foto da sua conta de luz, sem
+                visita técnica.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="card">
+          <h3>Solidez institucional</h3>
+          <p>
+            A iGreen é uma das maiores empresas de energia renovável do Brasil,
+            com governança e segurança por meio da parceria com a{" "}
+            <strong>Vibra Energia</strong> (antiga BR Distribuidora) e a
+            <strong>Comerc Energia</strong>.
+          </p>
+          <ul class="checks" style="margin-top:16px">
+            <li>
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 13l4 4L19 7" />
+              </svg>
+              +800 mil clientes conectados
+            </li>
+            <li>
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 13l4 4L19 7" />
+              </svg>
+              +1.000 usinas solares em operação
+            </li>
+            <li>
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 13l4 4L19 7" />
+              </svg>
+              +R$ 150 mi de economia gerada
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <Video
+        id="ZYk43x89eBY"
+        title="Por que milhares já escolheram ser clientes iGreen? Com Amanda Durante e Márcio Garcia"
+        marginTop
+      />
+    </div>
+  </section>
+
+  <!-- OFERTA (stack) -->
+  <section class="section" id="oferta">
+    <div class="wrap">
+      <div class="section__head section--center">
+        <p class="kicker kicker--light">A oferta</p>
+        <h2 class="section__title">
+          Tudo o que você ganha — e <em>quanto custa</em>
+        </h2>
+        <p class="section__sub">
+          Uma oferta boa demais para recusar: economia real na sua conta de luz
+          sem pagar nada para começar.
+        </p>
+      </div>
+
+      <div class="stack">
+        <div class="stack__item">
+          <span class="stack__num">1</span>
+          <div class="stack__body">
+            <h3>Energia solar por assinatura</h3>
+            <p>
+              Até 20% de desconto direto na fatura mensal da sua distribuidora.
+            </p>
+          </div>
+          <span class="stack__value">
+            R$ 0<small>investimento</small>
+          </span>
+        </div>
+        <div class="stack__item">
+          <span class="stack__num">2</span>
+          <div class="stack__body">
+            <h3>Placas e instalação</h3>
+            <p>Nada de placas no seu telhado nem equipe de obra na sua casa.</p>
+          </div>
+          <span class="stack__value">
+            R$ 0<small>para você</small>
+          </span>
+        </div>
+        <div class="stack__item">
+          <span class="stack__num">3</span>
+          <div class="stack__body">
+            <h3>Taxa de adesão e mensalidade</h3>
+            <p>Entrada zero, sem mensalidade e sem fidelidade engessada.</p>
+          </div>
+          <span class="stack__value">
+            R$ 0<small>de custo fixo</small>
+          </span>
+        </div>
+        <div class="stack__item">
+          <span class="stack__num">4</span>
+          <div class="stack__body">
+            <h3>Obras e reformas</h3>
+            <p>Nenhuma alteração na fiação, no telhado ou no imóvel.</p>
+          </div>
+          <span class="stack__value">
+            R$ 0<small>de obra</small>
+          </span>
+        </div>
+        <div class="stack__item">
+          <span class="stack__num">5</span>
+          <div class="stack__body">
+            <h3>Manutenção do sistema</h3>
+            <p>
+              A usina é da iGreen — você recebe o desconto todo mês sem se
+              preocupar com manutenção.
+            </p>
+          </div>
+          <span class="stack__value">
+            R$ 0<small>de manutenção</small>
+          </span>
+        </div>
+        <div class="stack__item">
+          <span class="stack__num">6</span>
+          <div class="stack__body">
+            <h3>Bônus: iGreen Club</h3>
+            <p>
+              +600 mil produtos e serviços com desconto, em todo o Brasil, para
+              os clientes iGreen.
+            </p>
+          </div>
+          <span class="stack__value">
+            R$ 0<small>bônus gratuito</small>
+          </span>
+        </div>
+        <div class="stack__item">
+          <span class="stack__num">7</span>
+          <div class="stack__body">
+            <h3>Ajuda o meio ambiente</h3>
+            <p>
+              Faça sua parte pelo meio ambiente com o uso de energia 100% limpa.
+            </p>
+          </div>
+          <span class="stack__value">
+            100%<small>energia limpa</small>
+          </span>
+        </div>
+      </div>
+
+      <p style="text-align:center;margin-top:22px;font-size:1.05rem">
+        <strong>Total para começar:</strong>{" "}
+        <span style="color:var(--brand-strong);font-weight:800">R$ 0,00</span>
+      </p>
+
+      <div class="hero__cta" style="justify-content:center;margin-top:18px">
+        <a
+          href={links.cadastroMin}
+          target="_blank"
+          rel="noopener"
+          class="btn btn--primary"
+        >
+          Quero aproveitar o desconto
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- iGREEN CLUB -->
+  <section class="section section--alt" id="igreen-club">
+    <div class="wrap">
+      <div class="section__head section--center">
+        <p class="kicker kicker--light">Bônus exclusivo</p>
+        <h2 class="section__title">
+          E ainda tem mais: o <em>iGreen Club</em> é seu, de graça
+        </h2>
+        <p class="section__sub">
+          Para muitos clientes, a economia nas compras do dia a dia com remédios
+          e supermercado já supera o valor da própria conta de luz. É um
+          presente sem custo adicional.
+        </p>
+      </div>
+
+      <ul class="stats" style="margin-bottom:26px">
+        <li class="stat">
+          <strong>+600 mil</strong>
+          <span>produtos e serviços com desconto</span>
+        </li>
+        <li class="stat">
+          <strong>+30 mil</strong>
+          <span>lojas em todo o Brasil</span>
+        </li>
+        <li class="stat">
+          <strong>Cashback</strong>
+          <span>por cada cliente indicado e aprovado</span>
+        </li>
+      </ul>
+
+      <div class="grid grid--2" style="align-items:center">
+        <ul class="bullets">
+          <li class="bullet">
+            <span class="bullet__icon">
+              <Icon name="gift" size={20} />
+            </span>
+            <div>
+              <h3>Acesso gratuito</h3>
+              <p>
+                Todos os clientes ativados ganham acesso imediato ao aplicativo
+                iGreen Club.
+              </p>
+            </div>
+          </li>
+          <li class="bullet">
+            <span class="bullet__icon">
+              <Icon name="store" size={20} />
+            </span>
+            <div>
+              <h3>Farmácias, cinemas e restaurantes</h3>
+              <p>
+                Descontos diários em Drogasil, Raia, cinemas, e-commerce,
+                restaurantes e passagens.
+              </p>
+            </div>
+          </li>
+          <li class="bullet">
+            <span class="bullet__icon">
+              <Icon name="money" size={20} />
+            </span>
+            <div>
+              <h3>Cashback ao indicar</h3>
+              <p>
+                Cada indicação aprovada gera saldo automático para abater a sua
+                fatura.
+              </p>
+            </div>
+          </li>
+          <li class="bullet">
+            <span class="bullet__icon">
+              <Icon name="star" size={20} />
+            </span>
+            <div>
+              <h3>Sorteio anual de cruzeiro</h3>
+              <p>
+                Clientes iGreen participam do sorteio anual de um cruzeiro para
+                2 pessoas.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="club-media">
+          <figure class="figure">
+            <img
+              src="/assets/igreen-app-mockup.png"
+              alt="Aplicativo iGreen Club mostrando benefícios e cashback"
+              width="548"
+              height="466"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/UWiWZZDkKBo"
+              title="iGreen Club — benefícios e cashback para clientes iGreen"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMULADOR -->
+  <section class="section section--center" id="simulador">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker kicker--light">Simulador gratuito</p>
+        <h2 class="section__title">
+          Quanto você vai <em>economizar?</em>
+        </h2>
+        <p class="section__sub">
+          Informe o valor médio da sua conta de luz e veja, na hora, quanto
+          sobra no seu bolso todo mês.
+        </p>
+      </div>
+      <Simulator id="sim-bill" />
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="section section--alt" id="como-funciona">
+    <div class="wrap">
+      <div class="section__head section--center">
+        <p class="kicker kicker--light">Processo simplificado</p>
+        <h2 class="section__title">
+          Ativação em <em>3 passos</em>
+        </h2>
+        <p class="section__sub">3 passos, poucos minutos, sem sair de casa.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <ol class="steps" style="display:contents">
+          <li class="steps__item">
+            <span class="steps__num">1</span>
+            <h3>Cadastre-se online</h3>
+            <p>
+              Preencha seus dados e envie uma foto da sua conta de luz. Tudo
+              digital, sem custo.
+            </p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__num">2</span>
+            <h3>A nossa IA simula</h3>
+            <p>
+              Verificamos a disponibilidade na sua região e calculamos o
+              desconto exato.
+            </p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__num">3</span>
+            <h3>Aceite digital</h3>
+            <p>
+              Aceite pelo celular em poucos minutos e receba o desconto
+              automático, todo mês.
+            </p>
+          </li>
+        </ol>
+      </div>
+
+      <p style="text-align:center;margin-top:22px">
+        <a href="/energia-por-assinatura#documentos" class="btn btn--ghost">
+          Documentos necessários para cadastrar um cliente
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- PROVA SOCIAL -->
+  <section class="section section--dark" id="resultados">
+    <div class="wrap">
+      <div class="section__head section--center">
+        <p class="kicker">Resultados</p>
+        <h2 class="section__title">
+          Números que mostram a <em>nossa força</em>
+        </h2>
+      </div>
+
+      <ul class="stats">
+        <li class="stat">
+          <strong>+R$ 150 mi</strong>
+          <span>de economia para os clientes</span>
+        </li>
+        <li class="stat">
+          <strong>+1.000</strong>
+          <span>usinas solares em operação</span>
+        </li>
+        <li class="stat">
+          <strong>+500</strong>
+          <span>colaboradores internos</span>
+        </li>
+        <li class="stat">
+          <strong>4,8</strong>
+          <span>estrelas no Google Reviews</span>
+        </li>
+        <li class="stat">
+          <strong>8,2</strong>
+          <span>nota no Reclame Aqui</span>
+        </li>
+      </ul>
+
+      <p style="text-align:center;margin-top:20px;color:var(--ink-dark-2);font-size:0.9rem">
+        Parcerias: Vibra Energia · Comerc Energia · TIM · Claro · BP Seguradora
+        · ANEEL / Lei 14.300/2022
+      </p>
+    </div>
+  </section>
+
+  <!-- OBJEÇÕES -->
+  <section class="section" id="duvidas">
+    <div class="wrap">
+      <div class="section__head section--center">
+        <p class="kicker kicker--light">Objeções</p>
+        <h2 class="section__title">
+          Parece bom demais para ser <em>verdade?</em>
+        </h2>
+        <p class="section__sub">
+          Entenda por que não é golpe, nem pirâmide — e como funciona na
+          prática.
+        </p>
+      </div>
+
+      <div class="grid grid--2x2">
+        <article class="card">
+          <h3>“Isso é golpe?”</h3>
+          <p>
+            Não. O modelo é regulamentado pela Lei nº 14.300/2022 e fiscalizado
+            pela ANEEL, e a iGreen atua em parceria com a Vibra Energia (antiga
+            BR Distribuidora) e a Comerc Energia.
+          </p>
+        </article>
+        <article class="card">
+          <h3>“E se faltar sol?”</h3>
+          <p>
+            A sua casa continua conectada à rede da sua distribuidora. A única
+            mudança é a origem da energia: limpa e mais barata, gerada nas
+            fazendas solares parceiras.
+          </p>
+        </article>
+        <article class="card">
+          <h3>“Tem fidelidade ou multa?”</h3>
+          <p>
+            Não há fidelidade engessada. A adesão é 100% digital, gratuita e
+            você cancela quando quiser, conforme as condições do contrato.
+          </p>
+        </article>
+        <article class="card">
+          <h3>“Vou pagar dois boletos?”</h3>
+          <p>
+            Você passa a receber o boleto da distribuidora (taxas obrigatórias)
+            e o boleto iGreen (a energia injetada, com desconto garantido). A
+            soma dos dois é sempre menor do que você pagava antes.
+          </p>
+        </article>
+      </div>
+
+      <p style="text-align:center;margin-top:24px">
+        <a href="/faq" class="btn btn--ghost">
+          Ver todas as perguntas frequentes
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <CtaBand
+    title="Pronto para pagar <em>menos</em> na conta de luz?"
+    text="É grátis, é online e leva poucos minutos. Faça sua simulação sem compromisso."
+    primary="Quero meu desconto"
+    primaryHref={links.cadastroMax}
+    note="Consulte as condições do contrato"
+  />
+</BaseLayout>

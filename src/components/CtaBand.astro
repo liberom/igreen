@@ -1,0 +1,58 @@
+---
+import { links } from '../data/site';
+
+interface Props {
+  title: string;
+  text?: string;
+  primary?: string;
+  primaryHref?: string;
+  secondary?: string;
+  secondaryHref?: string;
+  tertiary?: string;
+  tertiaryHref?: string;
+  accent?: 'primary' | 'secondary' | 'tertiary';
+  badges?: string[];
+  note?: string;
+}
+
+const defaultBadges = ['Grátis para aderir', 'Sem obras nem placas', 'Lei 14.300/2022 · ANEEL'];
+
+const {
+  title,
+  text,
+  primary = 'Quero economizar',
+  primaryHref = links.cadastroMin,
+  secondary = '',
+  secondaryHref = links.consultor,
+  tertiary = '',
+  tertiaryHref = links.consultor,
+  accent = 'primary',
+  badges = defaultBadges,
+  note,
+} = Astro.props;
+
+const attrs = (href: string) =>
+  href.startsWith('http') ? { target: '_blank', rel: 'noopener' } : {};
+---
+<section class="cta-band">
+  <div class="wrap">
+    <h2 set:html={title} />
+    {text && <p>{text}</p>}
+    <div class="hero__cta">
+      <a class:list={['btn', accent === 'primary' ? 'btn--primary' : 'btn--ghost-light']} href={primaryHref} {...attrs(primaryHref)}>{primary}</a>
+      {secondary && <a class:list={['btn', accent === 'secondary' ? 'btn--primary' : 'btn--ghost-light']} href={secondaryHref} {...attrs(secondaryHref)}>{secondary}</a>}
+      {tertiary && <a class:list={['btn', accent === 'tertiary' ? 'btn--primary' : 'btn--ghost-light']} href={tertiaryHref} {...attrs(tertiaryHref)}>{tertiary}</a>}
+    </div>
+    {badges.length > 0 && (
+      <div class="hero__badges">
+        {badges.map((badge) => (
+          <span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7" /></svg>
+            {badge}
+          </span>
+        ))}
+      </div>
+    )}
+    {note && <p style="margin-top:14px;font-size:0.85rem;color:var(--ink-dark-2)">{note}</p>}
+  </div>
+</section>

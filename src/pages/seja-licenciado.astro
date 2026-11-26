@@ -1,0 +1,246 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import EarningsSimulator from '../components/EarningsSimulator.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Video from '../components/Video.astro';
+import { links } from '../data/site';
+
+const title = 'Seja Licenciado — Renda recorrente com a iGreen Energy';
+const description = 'Seja um licenciado iGreen: comissão recorrente sobre a conta de luz e os serviços dos seus clientes, sem estoque, com treinamento oficial e app iGreen Connect.';
+---
+<BaseLayout title={title} description={description}>
+
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <p class="kicker">Oportunidade de renda extra</p>
+      <h1 class="hero__title">Seja <em>Licenciado</em></h1>
+      <p class="hero__sub">
+        Indique, conecte e receba todos os meses. Apresente economia em energia, telefonia e seguros
+        para famílias e empresas e ganhe comissão enquanto os clientes continuarem ativos.
+      </p>
+      <div class="hero__cta">
+        <a href="#licencas" class="btn btn--primary">Quero ser licenciado</a>
+        <a href="#simulador-de-ganhos" class="btn btn--ghost-light">Simular meus ganhos</a>
+      </div>
+      <div class="hero__badges">
+        <span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7" /></svg>
+          Sem estoque
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7" /></svg>
+          Treinamento oficial
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7" /></svg>
+          Comissão recorrente
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- GANHOS -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section__head section--center">
+        <p class="kicker kicker--light">Como funciona</p>
+        <h2 class="section__title">Ganhe dinheiro com a conta de luz das pessoas — <em>todo mês</em></h2>
+        <p class="section__sub">
+          Todo mundo paga conta de energia. Como licenciado iGreen, você ajuda as pessoas a economizar
+          e recebe comissão recorrente enquanto elas continuam clientes.
+        </p>
+      </div>
+
+      <ul class="stats" style="margin-bottom:28px">
+        <li class="stat"><strong>+800 mil</strong><span>clientes no ecossistema</span></li>
+        <li class="stat"><strong>+R$ 4,2 mi</strong><span>em recorrência já distribuída aos licenciados</span></li>
+        <li class="stat"><strong>+R$ 1 bi</strong><span>em boletos de energia pagos</span></li>
+      </ul>
+      <p style="margin-top:14px;font-size:0.8rem;color:var(--ink-3);text-align:center">
+        Números divulgados pela iGreen Energy no plano de negócios oficial.
+      </p>
+
+      <div class="grid grid--3">
+        <article class="card">
+          <span class="card__icon"><Icon name="money" size={22} /></span>
+          <h3>Renda recorrente todo mês</h3>
+          <p>Cada cliente que você indica paga a conta de luz todo mês — e você ganha junto, mês após mês.</p>
+        </article>
+        <article class="card">
+          <span class="card__icon"><Icon name="users" size={22} /></span>
+          <h3>Ganhe com algo que todos pagam</h3>
+          <p>Conta de energia não é opcional. É um produto que todo lar e empresa já consome.</p>
+        </article>
+        <article class="card">
+          <span class="card__icon"><Icon name="chart" size={22} /></span>
+          <h3>Sua renda cresce com a carteira</h3>
+          <p>Quanto mais clientes ativos, maior sua comissão mensal. Um efeito bola de neve.</p>
+        </article>
+      </div>
+
+      <Video
+        id="-ZQMGI6GDUg"
+        title="Resultados reais na Conexão Green"
+        marginTop
+      />
+    </div>
+  </section>
+
+  <!-- SIMULADOR DE GANHOS -->
+  <section class="section section--alt" id="simulador-de-ganhos">
+    <div class="wrap">
+      <div class="section__head section--center">
+        <p class="kicker kicker--light">Simulador</p>
+        <h2 class="section__title">Quanto a sua carteira <em>pode render por mês?</em></h2>
+        <p class="section__sub">
+          Monte uma carteira de exemplo com clientes da Conexão Green e veja a comissão recorrente direta
+          de até 4% sobre a conta de luz.
+        </p>
+      </div>
+      <EarningsSimulator />
+
+      <Video
+        id="vhCYoulMX50"
+        title="Bônus Extra Conexão Green"
+        marginTop
+      />
+    </div>
+  </section>
+
+  <!-- ROTEIRO -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section__head section--center">
+        <p class="kicker kicker--light">Passo a passo</p>
+        <h2 class="section__title">Como começar a <em>conectar</em></h2>
+      </div>
+      <div class="steps-grid">
+        <ol class="steps" style="display:contents">
+          <li class="steps__item"><span class="steps__num">1</span><h3>A gente conversa</h3><p>Apresento o plano de negócios oficial, os produtos e as regras, e tiro suas dúvidas.</p></li>
+          <li class="steps__item"><span class="steps__num">2</span><h3>Você escolhe a licença</h3><p>A licença Connect, com todas as conexões do ecossistema.</p></li>
+          <li class="steps__item"><span class="steps__num">3</span><h3>Cadastro e treinamento</h3><p>Você se cadastra e entra na trilha de primeiros passos da iGreen Academy.</p></li>
+          <li class="steps__item"><span class="steps__num">4</span><h3>Você começa a conectar</h3><p>Com o app iGreen Connect, cadastre clientes e acompanhe sua recorrência.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTRUTURA -->
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="section__head section--center">
+        <p class="kicker kicker--light">Estrutura</p>
+        <h2 class="section__title">Tudo o que você recebe como <em>licenciado</em></h2>
+      </div>
+
+      <div class="grid grid--3 cards-3x2">
+        <article class="card">
+          <span class="card__icon"><Icon name="phone" size={22} /></span>
+          <h3>App iGreen Connect</h3>
+          <p>Cadastre clientes, acompanhe sua recorrência e sua rede e solicite saques pelo celular.</p>
+        </article>
+        <article class="card">
+          <span class="card__icon"><Icon name="chart" size={22} /></span>
+          <h3>Escritório Virtual</h3>
+          <p>Painel para acompanhar clientes, equipe, comissões e treinamentos em tempo real.</p>
+        </article>
+        <article class="card">
+          <span class="card__icon"><Icon name="award" size={22} /></span>
+          <h3>Treinamentos e eventos</h3>
+          <p>Aulas ao vivo toda semana para cada conexão, com gravação, além da Live Connect e do Grand Show mensal.</p>
+        </article>
+        <article class="card">
+          <span class="card__icon"><Icon name="doc" size={22} /></span>
+          <h3>Materiais de apoio</h3>
+          <p>Apresentações, vídeos e peças oficiais para divulgar dentro das regras da marca.</p>
+        </article>
+        <article class="card">
+          <span class="card__icon"><Icon name="users" size={22} /></span>
+          <h3>Suporte ao licenciado</h3>
+          <p>Atendimento oficial da iGreen e acompanhamento direto do primeiro cliente em diante.</p>
+        </article>
+        <article class="card">
+          <span class="card__icon"><Icon name="gift" size={22} /></span>
+          <h3>iGreen Club + iGreen Pay</h3>
+          <p>Clube de descontos para você e seus clientes e conta digital gratuita (plano Basic) para receber.</p>
+        </article>
+      </div>
+
+      <Video
+        id="aaNNRP3wyio"
+        title="Como alavancar seus ganhos com Cashback do Cliente?"
+        marginTop
+      />
+    </div>
+  </section>
+
+  <!-- CARREIRA -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section__head section--center">
+        <p class="kicker kicker--light">Plano de carreira</p>
+        <h2 class="section__title">Suba de nível com a sua <em>carteira</em></h2>
+      </div>
+
+      <table class="compare">
+        <thead>
+          <tr><th>Nível</th><th>Conexões diretas</th><th>Pontos</th><th>Requisito extra</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Sênior</td><td>5</td><td>10.000</td><td>—</td></tr>
+          <tr><td>Gestor</td><td>10</td><td>50.000</td><td>—</td></tr>
+          <tr><td>Executivo</td><td>20</td><td>150.000</td><td>—</td></tr>
+          <tr><td>Diretor</td><td>40</td><td>500.000</td><td>10 licenciados diretos</td></tr>
+          <tr><td>Acionista</td><td>80</td><td>1.000.000</td><td>15 licenciados diretos</td></tr>
+          <tr><td>Royal e Embaixador</td><td colspan="3">Topo do plano de carreira · royalties Green de até 2,6% sobre a equipe</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- LICENÇAS -->
+  <section class="section section--alt" id="licencas">
+    <div class="wrap">
+      <div class="section__head section--center">
+        <p class="kicker kicker--light">Licença</p>
+        <h2 class="section__title">Comece já a trilhar seu novo <em>caminho</em></h2>
+      </div>
+
+      <div style="max-width:680px;margin-inline:auto">
+        <article class="card" style="border-color:var(--brand-line)">
+          <span class="card__icon"><Icon name="award" size={24} /></span>
+          <h3 style="font-size:1.35rem">Connect</h3>
+          <p style="font-size:1.6rem;font-weight:800;color:var(--brand-strong);margin-top:6px">R$ 1.997</p>
+          <p style="font-size:0.9rem;color:var(--ink-3)">à vista ou 12x · renovação anual</p>
+          <ul class="checks" style="margin-top:14px">
+            <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7" /></svg>Todas as conexões: Green, Livre, Solar, Placas, Telecom, Seguros e Expansão</li>
+            <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7" /></svg>Suporte completo e suporte Telecom 24 h para os seus clientes</li>
+            <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7" /></svg>Escritório Virtual, treinamentos, materiais e suporte</li>
+            <li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7" /></svg>iGreen Club e iGreen Pay (plano Basic)</li>
+          </ul>
+          <p style="margin-top:18px">
+            <a href={links.licenca} target="_blank" rel="noopener" class="btn btn--primary">Quero ativar minha licença</a>
+          </p>
+        </article>
+      </div>
+
+      <p style="text-align:center;margin-top:20px;font-size:0.85rem;color:var(--ink-3)">
+        Valores e comissões do plano de negócios oficial da iGreen (outubro/2026), sujeitos às regras em vigor.
+        Os ganhos não são garantidos.
+      </p>
+    </div>
+  </section>
+
+  <CtaBand
+    title='Pronto para construir uma <em>renda recorrente?</em>'
+    text="Converse com o seu licenciado iGreen e comece a conectar clientes."
+    primary="Quero ser licenciado"
+    primaryHref={links.licenca}
+    secondary="Ver perguntas frequentes"
+    secondaryHref="/faq"
+    badges={['Sem estoque', 'Treinamento oficial', 'Comissão recorrente']}
+    note="Licença em poucos minutos · Comissão recorrente por cliente ativo"
+  />
+
+</BaseLayout>

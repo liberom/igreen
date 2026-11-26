@@ -1,0 +1,98 @@
+---
+interface Props {
+  discount?: number;
+  dark?: boolean;
+  id?: string;
+}
+
+const { discount = 0.2, dark = false, id = 'sim-bill' } = Astro.props;
+const pct = Math.round(discount * 100);
+---
+<div class:list={['simulator', { 'simulator--dark': dark }]} data-simulator data-discount={discount}>
+  <div class="simulator__field">
+    <label for={id}>Valor médio da sua conta de luz (R$)</label>
+    <div class="simulator__inputwrap">
+      <span class="simulator__prefix" aria-hidden="true">R$</span>
+      <input id={id} name="bill" type="number" inputmode="decimal" min="0" step="any" placeholder="0,00" autocomplete="off" />
+    </div>
+    <div class="simulator__presets">
+      <button type="button" data-preset="300">Casa · R$ 300</button>
+      <button type="button" data-preset="800">Empresa · R$ 800</button>
+      <button type="button" data-preset="1500">Condomínio · R$ 1.500</button>
+    </div>
+    <p class="simulator__hint">Simulação com {pct}% de desconto sobre o valor da fatura.</p>
+  </div>
+
+  <div class="simulator__results" aria-live="polite">
+    <div class="simulator__result">
+      <span class="simulator__label">Você paga</span>
+      <strong class="simulator__value" data-out="pay">R$ 0,00</strong>
+    </div>
+    <div class="simulator__result simulator__result--save">
+      <span class="simulator__label">Você economiza</span>
+      <strong class="simulator__value" data-out="save">R$ 0,00</strong>
+    </div>
+    <div class="simulator__result">
+      <span class="simulator__label">Economia em 12 meses</span>
+      <strong class="simulator__value" data-out="year">R$ 0,00</strong>
+    </div>
+  </div>
+
+  <p class="simulator__note">
+    * Exemplo ilustrativo com {pct}% de desconto sobre o valor da fatura. O desconto varia por estado e
+    distribuidora. Consulte as condições.
+  </p>
+</div>
+
+<script>
+  const root = document.querySelector('[data-simulator]');
+  if (root) {
+    const discount = Number(root.getAttribute('data-discount') || '0.2');
+    const input = root.querySelector('input[name="bill"]');
+    const outPay = root.querySelector('[data-out="pay"]');
+    const outSave = root.querySelector('[data-out="save"]');
+    const outYear = root.querySelector('[data-out="year"]');
+    const format = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+    const presetButtons = Array.from(root.querySelectorAll('[data-preset]'));
+
+    function render() {
+      const value = Number(input.value);
+      if (!Number.isFinite(value) || value <= 0) {
+        outPay.textContent = format.format(0);
+        outSave.textContent = format.format(0);
+        outYear.textContent = format.format(0);
+        root.setAttribute('data-empty', '');
+        return;
+      }
+      root.removeAttribute('data-empty');
+      const save = value * discount;
+      outPay.textContent = format.format(value - save);
+      outSave.textContent = format.format(save);
+      outYear.textContent = format.format(save * 12);
+    }
+
+    function selectPreset(button) {
+      presetButtons.forEach((item) => item.classList.remove('is-active'));
+      button.classList.add('is-active');
+    }
+
+    input.addEventListener('input', render);
+
+    presetButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        input.value = button.getAttribute('data-preset') || '';
+        selectPreset(button);
+        render();
+        input.focus();
+      });
+    });
+
+    const initial = presetButtons.find((item) => item.getAttribute('data-preset') === '300') || presetButtons[0];
+    if (initial) {
+      input.value = initial.getAttribute('data-preset') || '';
+      selectPreset(initial);
+    }
+
+    render();
+  }
+</script>

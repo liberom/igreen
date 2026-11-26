@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Video from '../components/Video.astro';
+import { links } from '../data/site';
+
+const title = 'Conectividade — Conexão Telecom | iGreen Energy';
+const description = 'Telefonia móvel com a Conexão Telecom: parceria com TIM e Claro, banda cumulativa e planos customizáveis sem fidelidade.';
+---
+<BaseLayout title={title} description={description}>
+
+  <section class="hero hero--tight">
+    <div class="wrap hero__inner">
+      <p class="kicker">Conectividade</p>
+      <h1 class="hero__title">Conexão <em>Telecom</em></h1>
+      <p class="hero__sub">
+        Telefonia móvel com o melhor sinal e internet que não se perde no fim do mês.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker kicker--light">Telefonia móvel</p>
+        <h2 class="section__title">A internet que <em>acumula</em> e o sinal que não cai</h2>
+        <p class="section__sub">
+          A iGreen vai além da energia elétrica. Com a Conexão Telecom, os gigabytes que você não usou
+          voltam como saldo no mês seguinte.
+        </p>
+      </div>
+
+      <div class="grid grid--2" style="align-items:start">
+        <ul class="bullets">
+          <li class="bullet">
+            <span class="bullet__icon"><Icon name="phone" size={20} /></span>
+            <div>
+              <h3>TIM e Claro</h3>
+              <p>Parceria com as maiores operadoras do Brasil, com captação automática do melhor sinal disponível.</p>
+            </div>
+          </li>
+          <li class="bullet">
+            <span class="bullet__icon"><Icon name="check" size={20} /></span>
+            <div>
+              <h3>Banda cumulativa</h3>
+              <p>Os gigabytes de dados não utilizados no mês acumulam para o mês seguinte.</p>
+            </div>
+          </li>
+          <li class="bullet">
+            <span class="bullet__icon"><Icon name="spark" size={20} /></span>
+            <div>
+              <h3>Planos customizáveis</h3>
+              <p>Você não fica preso a uma franquia: aumente ou diminua os gigabytes na hora que quiser.</p>
+            </div>
+          </li>
+          <li class="bullet">
+            <span class="bullet__icon"><Icon name="bolt" size={20} /></span>
+            <div>
+              <h3>Cobertura 5G</h3>
+              <p>Internet de alta velocidade e cobertura nacional para você ficar sempre conectado.</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="card">
+          <span class="card__icon"><Icon name="phone" size={24} /></span>
+          <h3>Vantagens de ser cliente</h3>
+          <ul class="checks" style="margin-top:12px">
+            <li>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7" /></svg>
+              Sem fidelidade
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7" /></svg>
+              Dados que acumulam
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7" /></svg>
+              Cobertura 5G de alta velocidade
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7" /></svg>
+              Cashback por cada indicação válida
+            </li>
+          </ul>
+          <p style="margin-top:18px">
+            <a href={links.telecom} target="_blank" rel="noopener" class="btn btn--brand">Quero fazer a portabilidade</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="video-grid" style="margin-top:26px">
+        <Video
+          id="LS5QMg5IeT8"
+          title="Quais as vantagens de ser iGreen Telecom? Com Márcio Garcia"
+        />
+        <Video
+          id="bf7xcIH5A-k"
+          title="iGreen Cast — O que a iGreen Telecom está fazendo para revolucionar o mercado?"
+        />
+      </div>
+    </div>
+  </section>
+
+  <CtaBand
+    title='Quer um celular com <em>internet que acumula?</em>'
+    text="Conheça a Conexão Telecom com o seu licenciado iGreen."
+    primary="Quero fazer a portabilidade"
+    primaryHref={links.telecom}
+    badges={['Sem fidelidade', 'Dados que acumulam', 'Cobertura 5G']}
+  />
+
+</BaseLayout>

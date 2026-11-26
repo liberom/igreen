@@ -1,0 +1,256 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Video from '../components/Video.astro';
+import { company } from '../data/site';
+
+const title = 'Sobre a iGreen — História, marcos e números | iGreen Energy';
+const description = 'Conheça a trajetória da iGreen: fundada em 2021, mais de 800 mil clientes, 40 mil licenciados e um ecossistema de energia, telecom, seguros e mobilidade elétrica.';
+
+const milestones = [
+  {
+    year: '2021',
+    name: 'Origem',
+    text: 'Fundada por Thiago Alexander e Amanda Durante, em Minas Gerais. Nascia a iGreen, uma visão, um propósito: “Enriquecer vidas e impactar o mundo com a sustentabilidade.”',
+  },
+  {
+    year: '2023',
+    name: 'Marco histórico',
+    text: 'Aquisição de 50% da iGreen. Os gigantes do setor apostam na nossa missão: bilhões de reais investidos em capacidade energética, nos tornando a empresa mais preparada para liderar a transição energética.',
+  },
+  {
+    year: '2024',
+    name: 'Expansão e Telecom',
+    text: 'Mais de 100 mil clientes em apenas 2 anos. Início da operação iGreen Telecom: energia, tecnologia e conexão para todo o Brasil.',
+  },
+  {
+    year: '2025',
+    name: 'A maior do setor',
+    text: 'Mais de 450 mil clientes. A expansão se torna real, e este é apenas o começo de uma grande jornada.',
+  },
+  {
+    year: '2026',
+    name: 'Dominação global',
+    text: 'A trajetória da CEO Amanda Durante é reconhecida pela Forbes. A iGreen inicia sua expansão internacional, amplia seu ecossistema de multisserviços com a Conexão Seguros e supera a marca de 800 mil clientes. Um novo ciclo de crescimento e expansão está apenas começando.',
+  },
+];
+
+const highlights = [
+  {
+    icon: 'globe' as const,
+    name: 'Expansão internacional',
+    text: 'A iGreen cruza fronteiras. Com a chegada da iGreen Mobile, iniciamos nossa expansão internacional, levando conectividade aos Estados Unidos e abrindo caminho para uma atuação global.',
+  },
+  {
+    icon: 'award' as const,
+    name: 'Parceria estratégica',
+    text: 'Uma parceria que marcou o mercado. A união entre Gusttavo Lima, BP Seguradora e iGreen fortaleceu nosso ecossistema, conectando grandes marcas para oferecer ainda mais valor aos nossos clientes.',
+  },
+  {
+    icon: 'car' as const,
+    name: 'iGreen MOB',
+    text: 'Conecte-se ao novo. O eletroposto iGreen chega para conectar você a um futuro mais verde, inteligente e sustentável.',
+  },
+];
+
+const numbers = [
+  { value: '+R$ 150 mi', label: 'de economia para os nossos clientes' },
+  { value: '+1.000', label: 'usinas solares em operação' },
+  { value: '+40 mil', label: 'licenciados' },
+  { value: '+800 mil', label: 'clientes conectados' },
+  { value: '+500', label: 'colaboradores internos' },
+  { value: '3.000 m²', label: 'de sede própria no Brasil' },
+];
+
+const partners = [
+  {
+    group: 'Energia',
+    items: [
+      { name: 'Vibra Energia', text: 'Maior distribuidora de combustíveis e energia do Brasil (antiga BR Distribuidora).', href: 'https://www.vibraenergia.com.br/' },
+      { name: 'Comerc Energia', text: 'Líder nacional em soluções de transição energética e gestão no Mercado Livre de Energia.', href: 'https://www.comerc.com.br/' },
+    ],
+  },
+  {
+    group: 'Telecomunicações',
+    items: [
+      { name: 'TIM', text: 'Uma das maiores operadoras de telecomunicações do Brasil, com cobertura móvel e conectividade digital em todo o país.', href: 'https://www.tim.com.br/' },
+      { name: 'Claro', text: 'Um dos maiores conglomerados de telecomunicações da América Latina, com redes móveis, banda larga e soluções integradas.', href: 'https://www.claro.com.br/' },
+    ],
+  },
+  {
+    group: 'Seguros',
+    items: [
+      { name: 'BP Seguros', text: 'Com sede em Belo Horizonte e integrante do Grupo BP, atua em bens e danos com foco em soluções flexíveis de seguro automotivo com cobertura nacional.', href: 'https://www.bpseguradora.com.br/' },
+    ],
+  },
+];
+
+const regulation = [
+  { icon: 'doc' as const, name: 'ANEEL', text: 'Agência Nacional de Energia Elétrica — regulamentação e fiscalização do setor energético brasileiro.' },
+  { icon: 'bolt' as const, name: 'Lei 14.300/2022', text: 'Marco Legal da Geração Distribuída, que regulamenta a compensação de energia injetada na rede.' },
+  { icon: 'globe' as const, name: 'ABGD', text: 'Associação Brasileira de Geração Distribuída, referência do setor de geração distribuída no país.' },
+];
+---
+<BaseLayout title={title} description={description}>
+
+  <section class="hero hero--tight">
+    <div class="wrap hero__inner">
+      <p class="kicker">Sobre a iGreen</p>
+      <h1 class="hero__title">Uma jornada em <em>constante evolução</em></h1>
+      <p class="hero__sub">
+        A maior plataforma de soluções sustentáveis do Brasil. Uma empresa que integra soluções em energia,
+        seguro, telefonia, tecnologia e empreendedorismo para transformar e enriquecer a vida das pessoas.
+      </p>
+    </div>
+  </section>
+
+  <!-- TRAJETÓRIA -->
+  <section class="section" id="trajetoria">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker kicker--light">Nossa trajetória</p>
+        <h2 class="section__title">Cada marco <em>impulsiona o próximo</em></h2>
+        <p class="section__sub">
+          De uma ideia em Minas Gerais para um ecossistema que conecta centenas de milhares de pessoas
+          em todo o Brasil.
+        </p>
+      </div>
+
+      <ol class="timeline">
+        {milestones.map((item) => (
+          <li class="timeline__item">
+            <span class="timeline__year">{item.year}</span>
+            <div class="timeline__body">
+              <h3>{item.name}</h3>
+              <p>{item.text}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <Video
+        id="szg1Qr_K7eY"
+        title="Institucional iGreen 2026"
+        marginTop
+      />
+    </div>
+  </section>
+
+  <!-- MARCOS DE 2026 -->
+  <section class="section section--alt" id="marcos">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker kicker--light">O novo ciclo</p>
+        <h2 class="section__title">Marcos que <em>abriram caminho</em></h2>
+      </div>
+
+      <div class="grid grid--3">
+        {highlights.map((item) => (
+          <div class="card">
+            <span class="card__icon"><Icon name={item.icon} size={24} /></span>
+            <h3>{item.name}</h3>
+            <p>{item.text}</p>
+          </div>
+        ))}
+      </div>
+
+      <Video
+        id="dyv6cDxY_SU"
+        title="Uma marca brasileira, uma operação global"
+        marginTop
+      />
+    </div>
+  </section>
+
+  <!-- NÚMEROS -->
+  <section class="section section--dark" id="numeros">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker">Nossos números</p>
+        <h2 class="section__title">Os números <em>não mentem</em></h2>
+        <p class="section__sub">Um ecossistema completo, criado para gerar economia e transformar a vida das pessoas.</p>
+      </div>
+
+      <ul class="stats">
+        {numbers.map((item) => (
+          <li class="stat">
+            <strong>{item.value}</strong>
+            <span>{item.label}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- PARCEIROS -->
+  <section class="section" id="parceiros">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker kicker--light">Líderes de mercado</p>
+        <h2 class="section__title">Parcerias que <em>dão respaldo</em></h2>
+        <p class="section__sub">
+          Contamos com o respaldo de quem domina o mercado de energia, telecomunicações e seguros no Brasil.
+        </p>
+      </div>
+
+      <div class="timeline-partners">
+        {partners.map((group) => (
+          <div class="partner-group">
+            <h3 class="partner-group__title">{group.group}</h3>
+            <div class="grid grid--2">
+              {group.items.map((partner) => (
+                <a class="card card--link" href={partner.href} target="_blank" rel="noopener">
+                  <h3>{partner.name} <span aria-hidden="true">↗</span></h3>
+                  <p>{partner.text}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <Video
+        id="88q9CjmxCOc?si=YVelOJgfyitgjl4I"
+        title="iGreen: Aqui o futuro já está acontecendo."
+        marginTop
+      />
+    </div>
+  </section>
+
+  <!-- REGULAÇÃO -->
+  <section class="section section--alt" id="regulacao">
+    <div class="wrap">
+      <div class="section__head">
+        <p class="kicker kicker--light">Operação regulada</p>
+        <h2 class="section__title">Transparência <em>em cada conexão</em></h2>
+        <p class="section__sub">
+          Nossa operação é amparada pelo marco legal brasileiro e por órgãos reguladores do setor.
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        {regulation.map((item) => (
+          <div class="card">
+            <span class="card__icon"><Icon name={item.icon} size={24} /></span>
+            <h3>{item.name}</h3>
+            <p>{item.text}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="partner-address">
+        <strong>Sede própria:</strong> R. Marfim, 265 · Jaraguá, Uberlândia/MG · {company.legalName} · {company.cnpj}
+      </p>
+    </div>
+  </section>
+
+  <CtaBand
+    title='Quer fazer parte dessa <em>jornada?</em>'
+    text="Seja cliente iGreen ou construa sua própria renda como licenciado."
+    primary="Quero ser licenciado"
+    primaryHref="/seja-licenciado"
+    badges={['+800 mil clientes', 'Ecossistema completo', 'Lei 14.300/2022']}
+  />
+
+</BaseLayout>
