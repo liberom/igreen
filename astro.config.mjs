@@ -5,4 +5,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   output: 'static',
   trailingSlash: 'never',
+  site: 'https://liberom.github.io',
 });
