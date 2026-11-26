@@ -6,7 +6,7 @@ import CtaBand from '../components/CtaBand.astro';
 import Video from '../components/Video.astro';
 import { links } from '../data/site';
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 const title = 'Seja Licenciado — Renda recorrente com a iGreen Energy';
 const description = 'Seja um licenciado iGreen: comissão recorrente sobre a conta de luz e os serviços dos seus clientes, sem estoque, com treinamento oficial e app iGreen Connect.';

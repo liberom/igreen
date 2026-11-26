@@ -7,14 +7,15 @@ interface Props {
 }
 
 const { currentPath = '/', base = '' } = Astro.props;
+const normalizedBase = base.replace(/\/?$/, '/');
 
 const isActive = (href: string) =>
   href === base ? currentPath === base : currentPath.startsWith(href);
 ---
 <header class="site-header">
   <div class="wrap site-header__inner">
-    <a class="brand" href={base} aria-label="iGreen Energy — início">
-      <img class="brand__logo" src={`${base}assets/igreen-logomarca-neon.svg`} alt="iGreen Energy" width="295" height="96" />
+    <a class="brand" href={normalizedBase} aria-label="iGreen Energy — início">
+      <img class="brand__logo" src={`${normalizedBase}assets/igreen-logomarca-neon.svg`} alt="iGreen Energy" width="295" height="96" />
     </a>
 
     <nav class="nav" aria-label="Navegação principal">
@@ -27,7 +28,7 @@ const isActive = (href: string) =>
           {link.label}
         </a>
       ))}
-      <a class="btn btn--primary btn--sm nav__cta" href={`${base}seja-licenciado`}>Seja Licenciado</a>
+      <a class="btn btn--primary btn--sm nav__cta" href={`${normalizedBase}seja-licenciado`}>Seja Licenciado</a>
     </nav>
 
     <button class="nav__toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-nav-toggle>
@@ -41,7 +42,7 @@ const isActive = (href: string) =>
     {navLinks.map((link) => (
       <a href={link.href} class:list={[{ 'is-active': isActive(link.href) }]}>{link.label}</a>
     ))}
-    <a class="btn btn--primary" href={`${base}seja-licenciado`}>Seja Licenciado</a>
+    <a class="btn btn--primary" href={`${normalizedBase}seja-licenciado`}>Seja Licenciado</a>
   </div>
 </header>
 

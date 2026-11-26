@@ -5,7 +5,7 @@ import CtaBand from '../components/CtaBand.astro';
 import Video from '../components/Video.astro';
 import { company } from '../data/site';
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 const title = 'Sobre a iGreen — História, marcos e números | iGreen Energy';
 const description = 'Conheça a trajetória da iGreen: fundada em 2021, mais de 800 mil clientes, 40 mil licenciados e um ecossistema de energia, telecom, seguros e mobilidade elétrica.';
