@@ -6,4 +6,5 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'never',
   site: 'https://liberom.github.io',
+  base: '/igreen',
 });
