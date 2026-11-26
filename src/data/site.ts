@@ -4,7 +4,7 @@ export interface NavLink {
 }
 
 /** Base URL for GitHub Pages deployment (set via astro.config.mjs `base: '/igreen'`) */
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 export const navLinks: NavLink[] = [
   { href: `${base}`, label: 'Início' },
