@@ -2,11 +2,11 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Icon from "../components/Icon.astro";
 import Simulator from "../components/Simulator.astro";
-import CtaBand from '../components/CtaBand.astro';
-import Video from '../components/Video.astro';
-import { links } from '../data/site';
+import CtaBand from "../components/CtaBand.astro";
+import Video from "../components/Video.astro";
+import { links } from "../data/site";
 
-const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
 
 const title = "iGreen Energy — Economize até 20% na conta de luz";
 const description =
@@ -301,37 +301,37 @@ const description =
             </p>
           </div>
           <span class="stack__value">
-            R$ 0<small>investimento</small>
+            Até 20%<small>de desconto</small>
           </span>
         </div>
         <div class="stack__item">
           <span class="stack__num">2</span>
-          <div class="stack__body">
-            <h3>Placas e instalação</h3>
-            <p>Nada de placas no seu telhado nem equipe de obra na sua casa.</p>
-          </div>
-          <span class="stack__value">
-            R$ 0<small>para você</small>
-          </span>
-        </div>
-        <div class="stack__item">
-          <span class="stack__num">3</span>
-          <div class="stack__body">
-            <h3>Taxa de adesão e mensalidade</h3>
-            <p>Entrada zero, sem mensalidade e sem fidelidade engessada.</p>
-          </div>
-          <span class="stack__value">
-            R$ 0<small>de custo fixo</small>
-          </span>
-        </div>
-        <div class="stack__item">
-          <span class="stack__num">4</span>
           <div class="stack__body">
             <h3>Obras e reformas</h3>
             <p>Nenhuma alteração na fiação, no telhado ou no imóvel.</p>
           </div>
           <span class="stack__value">
             R$ 0<small>de obra</small>
+          </span>
+        </div>
+        <div class="stack__item">
+          <span class="stack__num">3</span>
+          <div class="stack__body">
+            <h3>Placas e instalação</h3>
+            <p>Nada de placas no seu telhado nem equipe de obra na sua casa.</p>
+          </div>
+          <span class="stack__value">
+            R$ 0<small>investimento</small>
+          </span>
+        </div>
+        <div class="stack__item">
+          <span class="stack__num">4</span>
+          <div class="stack__body">
+            <h3>Taxa de adesão e mensalidade</h3>
+            <p>Entrada zero, sem mensalidade e sem fidelidade engessada.</p>
+          </div>
+          <span class="stack__value">
+            R$ 0<small>de custo fixo</small>
           </span>
         </div>
         <div class="stack__item">
@@ -350,19 +350,6 @@ const description =
         <div class="stack__item">
           <span class="stack__num">6</span>
           <div class="stack__body">
-            <h3>Bônus: iGreen Club</h3>
-            <p>
-              +600 mil produtos e serviços com desconto, em todo o Brasil, para
-              os clientes iGreen.
-            </p>
-          </div>
-          <span class="stack__value">
-            R$ 0<small>bônus gratuito</small>
-          </span>
-        </div>
-        <div class="stack__item">
-          <span class="stack__num">7</span>
-          <div class="stack__body">
             <h3>Ajuda o meio ambiente</h3>
             <p>
               Faça sua parte pelo meio ambiente com o uso de energia 100% limpa.
@@ -373,16 +360,29 @@ const description =
           </span>
         </div>
         <div class="stack__item">
-          <span class="stack__num">8</span>
+          <span class="stack__num">7</span>
           <div class="stack__body">
             <h3>Cashback por indicação</h3>
             <p>
-              Cada cliente indicado e aprovado gera saldo automático para abater
-              a sua fatura.
+              Cada cliente indicado e aprovado gera saldo mensal automático para
+              abater a sua fatura.
             </p>
           </div>
           <span class="stack__value">
-            Cashback<small>por indicação</small>
+            Cashback<small>mensal a cada indicação</small>
+          </span>
+        </div>
+        <div class="stack__item">
+          <span class="stack__num">8</span>
+          <div class="stack__body">
+            <h3>Bônus: iGreen Club</h3>
+            <p>
+              Descontos em +40.000 lojas, em todo o Brasil, para os clientes
+              iGreen.
+            </p>
+          </div>
+          <span class="stack__value">
+            +600.000<small>produtos com descontos</small>
           </span>
         </div>
       </div>
@@ -572,7 +572,10 @@ const description =
       </div>
 
       <p style="text-align:center;margin-top:22px">
-        <a href={`${base}energia-por-assinatura#documentos`} class="btn btn--ghost">
+        <a
+          href={`${base}energia-por-assinatura#documentos`}
+          class="btn btn--ghost"
+        >
           Documentos necessários para cadastrar um cliente
         </a>
       </p>
