@@ -32,7 +32,8 @@
 !/tmp/storage/
 !/tmp/storage/.keep
 
-/public/assets
+# public/assets is committed on purpose: GitHub Pages builds from source,
+# and ignored assets never reach the deployed site (they 404).
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
