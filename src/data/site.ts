@@ -36,7 +36,7 @@ export const contact = {
 export const links = {
   cadastroMin: 'https://green.igreenenergy.com.br/autoconexao/?id=197608&desc=min',
   cadastroMax: 'https://green.igreenenergy.com.br/autoconexao/?id=197608&desc=max',
-  consultor: 'https://wa.me/553192012846?text=Vim%20pelo%20site.%20Quero%20saber%20mais%20sobre%20a%20oferta%20da%20iGreen.',
+  consultor: 'https://wa.me/553192012846?text=Vim%20pelo%20site.%20Quero%20saber%20mais%20sobre%20a%20Geração%20Própria.',
   solar: 'https://wa.me/553192012846?text=Vim%20pelo%20site.%20Estou%20interessado%20na%20usina%20sem%20investimento%20da%20iGreen%20(Conex%C3%A3o%20Solar).',
   placas: 'https://wa.me/553192012846?text=Vim%20pelo%20site.%20Gostaria%20de%20or%C3%A7ar%20um%20projeto%20de%20usina%20solar%20(Conex%C3%A3o%20Placas).',
   seguros: 'https://seguros.igreenenergy.com.br?t=fL9tC7D_Y5yT1qjHk1etJUhaChpT4JFl3mSgBFs7dt9tx5wdg-4',
